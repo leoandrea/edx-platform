@@ -26,7 +26,11 @@ from rest_framework.serializers import Serializer
 
 from lms.djangoapps.courseware.courses import get_course, get_course_with_access
 from common.djangoapps.edxmako.shortcuts import render_to_response
-from openedx.core.djangoapps.course_groups.models import CohortAssignmentNotAllowed, CohortChangeNotAllowed, CohortMembership
+from openedx.core.djangoapps.course_groups.models import (
+    CohortAssignmentNotAllowed,
+    CohortChangeNotAllowed,
+    CohortMembership,
+)
 from openedx.core.djangoapps.course_groups.permissions import IsStaffOrAdmin
 from openedx.core.lib.api.authentication import BearerAuthenticationAllowInactiveUser
 from openedx.core.lib.api.view_utils import DeveloperErrorViewMixin

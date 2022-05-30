@@ -122,7 +122,7 @@ class CohortMembership(models.Model):
             # .. filter_type: org.openedx.learning.cohort.assignment.requested.v1
             user, cohort = CohortAssignmentRequested.run_filter(user=user, target_cohort=cohort)
         except CohortAssignmentRequested.PreventCohortAssignment as exc:
-                raise CohortAssignmentNotAllowed(str(exc)) from exc
+            raise CohortAssignmentNotAllowed(str(exc)) from exc
 
         with transaction.atomic():
             membership, created = cls.objects.select_for_update().get_or_create(
