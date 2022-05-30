@@ -121,9 +121,9 @@ class CohortFiltersTest(SharedModuleStoreTestCase):
 
     @override_settings(
         OPEN_EDX_FILTERS_CONFIG={
-            "org.openedx.learning.cohort.change.requested.v1": {
+            "org.openedx.learning.cohort.assignment.requested.v1": {
                 "pipeline": [
-                    "openedx.core.djangoapps.course_groups.tests.test_filters.TestCohortChangeStep",
+                    "openedx.core.djangoapps.course_groups.tests.test_filters.TestCohortAssignmentStep",
                 ],
                 "fail_silently": False,
             },
@@ -171,9 +171,9 @@ class CohortFiltersTest(SharedModuleStoreTestCase):
 
     @override_settings(
         OPEN_EDX_FILTERS_CONFIG={
-            "org.openedx.learning.cohort.change.requested.v1": {
+            "org.openedx.learning.cohort.assignment.requested.v1": {
                 "pipeline": [
-                    "openedx.core.djangoapps.course_groups.tests.test_filters.TestStopCohortChangeStep",
+                    "openedx.core.djangoapps.course_groups.tests.test_filters.TestStopAssignmentChangeStep",
                 ],
                 "fail_silently": False,
             },
@@ -184,7 +184,7 @@ class CohortFiltersTest(SharedModuleStoreTestCase):
         Test prevent the user's cohort assignment through a pipeline step.
 
         Expected result:
-            - CohortAssignmentRequested is triggered and executes TestStopCohortChangeStep.
+            - CohortAssignmentRequested is triggered and executes TestStopAssignmentChangeStep.
             - The user can't be assigned to the cohort.
         """
         CohortMembership.assign(cohort=self.first_cohort, user=self.user)
