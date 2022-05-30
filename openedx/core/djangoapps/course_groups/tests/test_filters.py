@@ -65,7 +65,7 @@ class TestStopAssignmentChangeStep(PipelineStep):
 
     def run_filter(self, user, target_cohort, *args, **kwargs):  # pylint: disable=arguments-differ
         """Pipeline step that stops the cohort change process."""
-        raise CohortAssignmentRequested.PreventCohortChange("You can't be assign to this cohort.")
+        raise CohortAssignmentRequested.PreventCohortAssignment("You can't be assign to this cohort.")
 
 
 @skip_unless_lms
