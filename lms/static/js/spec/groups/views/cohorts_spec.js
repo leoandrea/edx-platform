@@ -14,6 +14,7 @@ define(['backbone', 'jquery', 'edx-ui-toolkit/js/utils/spec-helpers/ajax-helpers
             var catLoversInitialCount = 123,
                 dogLoversInitialCount = 456,
                 unknownUserMessage,
+                notAllowedUserMessage,
                 invalidEmailMessage, createMockCohort, createMockCohorts, createMockContentGroups,
                 createMockCohortSettingsJson,
                 createCohortsView, cohortsView, requests, respondToRefresh, verifyMessage, verifyNoMessage,
