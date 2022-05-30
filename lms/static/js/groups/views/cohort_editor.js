@@ -280,7 +280,7 @@
                                     {email: invalidEmails[i]}));
                             }
                             for (i = 0; i < notAllowedErrorsShown; i++) {
-                                details.push(interpolate_text(gettext('Cohort assignment not allowed: {email}'),
+                                details.push(interpolate_text(gettext('Cohort assignment not allowed: {email || user}'),
                                     {email: notAllowed[i]}));
                             }
                             return details;

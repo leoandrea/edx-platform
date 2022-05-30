@@ -677,15 +677,15 @@ define(['backbone', 'jquery', 'edx-ui-toolkit/js/utils/spec-helpers/ajax-helpers
 
                 it('shows an error when user assignment not allowed', function() {
                     createCohortsView(this, {selectCohort: 1});
-                    addStudents('not_allowed@test.com');
+                    addStudents('not_allowed');
                     AjaxHelpers.expectRequest(
                         requests, 'POST', '/mock_service/cohorts/1/add', 'users=not_allowed'
                     );
-                    respondToAdd({not_allowed: ['not_allowed@test.com']});
+                    respondToAdd({not_allowed: ['not_allowed']});
                     respondToRefresh(catLoversInitialCount, dogLoversInitialCount);
                     verifyHeader(1, 'Cat Lovers', catLoversInitialCount);
                     verifyDetailedMessage('There was an error when trying to add learners:', 'error',
-                        [notAllowedUserMessage('not_allowed@test.com')]
+                        [notAllowedUserMessage('not_allowed')]
                     );
                 });
 
