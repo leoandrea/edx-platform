@@ -210,7 +210,7 @@ define(['backbone', 'jquery', 'edx-ui-toolkit/js/utils/spec-helpers/ajax-helpers
                 return 'Invalid email address: ' + name;
             };
 
-            notAllowedUserMessage function(email) {
+            notAllowedUserMessage = function(email) {
                 return 'Cohort assignment not allowed: ' + email;
             };
 
