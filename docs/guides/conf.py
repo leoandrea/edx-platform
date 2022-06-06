@@ -222,7 +222,6 @@ autodoc_mock_imports = [
 modules = {
     'cms': 'cms',
     'common/lib/capa/capa': 'common/lib/capa',
-    'common/lib/xmodule/xmodule': 'common/lib/xmodule',
     'lms': 'lms',
     'openedx': 'openedx',
     'xmodule': 'xmodule',

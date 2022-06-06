@@ -38,7 +38,7 @@ exclude+='|^common/test/data/?.*$'
 #  * common/lib/xmodule -> EXCLUDE from check.
 #  * common/lib/xmodule/xmodule/modulestore -> INCLUDE in check.
 exclude+='|^common/lib$'
-exclude+='|^common/lib/(capa|xmodule)$'
+exclude+='|^common/lib/capa$'
 
 # xmodule data folder
 exclude+='|^xmodule/tests/data/xml-course-root/capa$'
