@@ -44,7 +44,7 @@ from openedx.core.lib.cache_utils import CacheService
 MODULE_DIR = path(__file__).dirname()
 # Location of common test DATA directory
 # '../../common/test/data/'
-DATA_DIR = MODULE_DIR.parent.parent /"common" / "test" / "data"
+DATA_DIR = MODULE_DIR.parent.parent / "common" / "test" / "data"
 
 
 class TestModuleSystem(ModuleSystem):  # pylint: disable=abstract-method
