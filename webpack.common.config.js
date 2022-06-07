@@ -15,7 +15,7 @@ var filesWithRequireJSBlocks = [
     path.resolve(__dirname, 'common/static/common/js/components/utils/view_utils.js'),
     /descriptors\/js/,
     /modules\/js/,
-    /xmodule\/xmodule\/js\/src\//
+    /xmodule\/js\/src\//
 ];
 
 var defineHeader = /\(function ?\(((define|require|requirejs|\$)(, )?)+\) ?\{/;
@@ -72,7 +72,7 @@ module.exports = Merge.smart({
             // Studio
             Import: './cms/static/js/features/import/factories/import.js',
             CourseOrLibraryListing: './cms/static/js/features_jsx/studio/CourseOrLibraryListing.jsx',
-            LibrarySourcedBlockPicker: './xmodule/xmodule/assets/library_source_block/LibrarySourcedBlockPicker.jsx',  // eslint-disable-line max-len
+            LibrarySourcedBlockPicker: './xmodule/assets/library_source_block/LibrarySourcedBlockPicker.jsx',  // eslint-disable-line max-len
             'js/factories/textbooks': './cms/static/js/factories/textbooks.js',
             'js/factories/container': './cms/static/js/factories/container.js',
             'js/factories/context_course': './cms/static/js/factories/context_course.js',
@@ -115,7 +115,7 @@ module.exports = Merge.smart({
 
             // Common
             ReactRenderer: './common/static/js/src/ReactRenderer.jsx',
-            XModuleShim: 'xmodule/js/src/xmodule.js',
+            XModuleShim: './xmodule/js/src/xmodule.js',
             VerticalStudentView: './xmodule/xmodule/assets/vertical/public/js/vertical_student_view.js',
             commons: 'babel-polyfill'
         },
