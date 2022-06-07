@@ -3,8 +3,8 @@ Basic unit tests for LibraryContentBlock
 
 Higher-level tests are in `cms/djangoapps/contentstore/tests/test_libraries.py`.
 """
-import ddt
 from unittest.mock import MagicMock, Mock, patch
+import ddt
 
 from bson.objectid import ObjectId
 from fs.memoryfs import MemoryFS
